@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { data } from "../data/data"; // Assuming your data is stored in this path
+import Link from "next/link";
 
 const SpeechToText = () => {
   const [isListening, setIsListening] = useState(false);
@@ -106,6 +107,12 @@ const SpeechToText = () => {
           className="px-8 py-3 text-white bg-blue-500 font-semibold rounded-full shadow-lg"
         >
           Boys Assistant
+        </button>
+        <button
+          onClick={() => switchVoice("male")}
+          className="px-8 py-3 text-white bg-blue-500 font-semibold rounded-full shadow-lg"
+        >
+         <Link href="/news">News</Link>  
         </button>
       </div>
 
